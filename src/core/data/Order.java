@@ -1,9 +1,8 @@
-package core;
+package core.data;
 
 import java.util.Date;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
@@ -78,7 +77,7 @@ public class Order {
 	}
 
 	/**
-	 * Compute the total amount of the order
+	 * Compute the total amount (total price) of the order
 	 */
 	public double computeAmount() {
 
