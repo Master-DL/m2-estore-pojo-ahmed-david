@@ -1,5 +1,6 @@
 package core.data;
 
+import core.services.ConcreteProvider;
 import core.services.Provider;
 
 public class ItemInStock {

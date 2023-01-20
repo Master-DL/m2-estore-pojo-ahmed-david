@@ -1,20 +1,18 @@
 package main;
 
-import core.services.Bank;
 import core.data.Client;
-import core.services.Provider;
-import core.services.Store;
+import core.services.*;
 
 public class Main {
 
-	public static void main(String[] args) {
-		Provider prov = new Provider();
-		Bank bank = new Bank();
-		Store store = new Store(prov,bank);
-		Client cl = new Client(store);
-		
-		cl.run();
+    public static void main(String[] args) {
+        Provider prov = new ConcreteProvider();
+        Bank bank = new ConcreteBank();
+        Store store = new ConcreteStore(prov, bank);
+        Client cl = new Client(store);
 
-	}
+        cl.run();
+
+    }
 
 }
