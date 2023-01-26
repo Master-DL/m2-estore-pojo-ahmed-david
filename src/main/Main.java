@@ -6,10 +6,10 @@ import core.services.*;
 public class Main {
 
     public static void main(String[] args) {
-        Provider prov = new ConcreteProvider();
-        Bank bank = new ConcreteBank();
-        Store store = new ConcreteStore(prov, bank);
-        Client cl = new Client(store);
+        Orderable prov = new Provider();
+        Transferable transferable = new Bank();
+        OrdrePreparation ordrePreparation = new Store(prov, transferable);
+        Client cl = new Client(ordrePreparation);
 
         cl.run();
 

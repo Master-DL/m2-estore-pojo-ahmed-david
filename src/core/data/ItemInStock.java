@@ -1,7 +1,6 @@
 package core.data;
 
-import core.services.ConcreteProvider;
-import core.services.Provider;
+import core.services.Orderable;
 
 public class ItemInStock {
 
@@ -14,18 +13,18 @@ public class ItemInStock {
 	private Object item;
 	private int quantity;
 	private double price;
-	private Provider provider;
+	private Orderable orderable;
 
 	private ItemInStock() {
 		num = numItems++;
 	}
 
-	public ItemInStock(Object item, int quantity, double price, Provider provider) {
+	public ItemInStock(Object item, int quantity, double price, Orderable orderable) {
         this();
 		this.item = item;
 		this.quantity = quantity;
 		this.price = price;
-		this.provider = provider;
+		this.orderable = orderable;
 	}
 
 	public int getQuantity() {
@@ -41,7 +40,7 @@ public class ItemInStock {
 	@Override
 	public String toString() {
 		return "ItemInStock [num=" + num + ", item=" + item + ", quantity=" + quantity + ", price=" + price
-				+ ", provider=" + provider + "]";
+				+ ", provider=" + orderable + "]";
 	}
 
 
